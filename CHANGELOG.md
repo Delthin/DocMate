@@ -1,5 +1,33 @@
 # 更新日志
 
+## [1.4.1] - 2025-10-15
+
+### 🛠️ 用户体验优化
+
+#### 🔧 界面优化改进
+
+- **移除登录功能**：删除了所有登录相关的UI组件和逻辑，简化用户使用流程
+- **界面布局重新设计**：优化头部布局，移除中间登录区域，采用更简洁的左侧标题+右侧按钮布局
+- **一键使用AI功能**：用户现在可以直接使用所有AI功能，无需任何登录步骤
+
+#### 🧹 代码清理优化
+
+- **AuthStatus组件简化**：移除登录状态管理逻辑，保留空组件以避免编译错误
+- **CompactHeader组件优化**：删除认证相关参数和UI元素，简化组件结构
+- **App.tsx清理**：移除isAuthenticated状态和handleAuthChange函数，精简状态管理
+- **InputPanel组件简化**：删除authRequired参数和认证提示UI
+- **CSS样式清理**：移除所有认证相关的CSS样式，优化布局样式
+
+#### 📋 详细技术变更
+
+- 移除 `packages/ui/src/components/AuthStatus.tsx` 中的登录逻辑
+- 简化 `packages/ui/src/components/CompactHeader.tsx` 组件结构
+- 清理 `packages/ui/src/App.tsx` 中的认证状态管理
+- 优化 `packages/ui/src/components/InputPanel.tsx` 组件接口
+- 更新 `packages/ui/src/App.css` 样式，调整Header布局
+
+---
+
 ## [1.4.0] - 2025-09-29
 
 ### 🚀 架构升级：LangChain框架重构
